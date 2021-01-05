@@ -83,7 +83,7 @@ if (gameState === PLAY){
         swordGroup.destroyEach();
         treasureCollection = 0
         chances = chances+1;
-      if(chances===0){
+      if(chances===5){
         gameState = END}
 
     }
