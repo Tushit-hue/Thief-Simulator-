@@ -5,6 +5,7 @@ var cashG,diamondsG,jwelleryG,swordGroup;
 var PLAY = 0
 var END = 1
 var gameState = PLAY
+var chances = 0
 
 
 
@@ -81,7 +82,7 @@ if (gameState === PLAY){
       if(swordGroup.isTouching(boy)) {
         swordGroup.destroyEach();
         treasureCollection = 0
-        gameState = END
+        chances = chances+1;
       
 
     }
@@ -111,6 +112,8 @@ drawSprites();
   textSize(20);
   fill(255);
   text("Treasure: "+ treasureCollection,150,30);
+  
+  text("Chances Left :"+(5-chances),100,50)
   
  
   }
